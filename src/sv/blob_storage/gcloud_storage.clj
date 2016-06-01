@@ -32,7 +32,7 @@
       :path (path config id)}))
   (exists [this id]
     (boolean
-     (get-object-info
+     (sc/get-object-info
       (:client config)
       {:bucket (:bucket config)
        :path (path config id)})))
