@@ -1,4 +1,4 @@
-(defproject sv.blob-storage/gcloud-storage "0.1.0"
+(defproject sv.blob-storage/gcloud-storage "0.1.1-SNAPSHOT"
   :description "Implementation of the sv/blob-storage protocol for
                 Google Cloud Storage."
   :license {:name "Eclipse Public License"
