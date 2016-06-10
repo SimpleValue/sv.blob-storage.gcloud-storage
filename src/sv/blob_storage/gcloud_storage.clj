@@ -22,25 +22,25 @@
         ((:client config)
          (sc/upload-request
           {:bucket (:bucket config)
-           :path (path config id)
+           :name (path config id)
            :content in})))
       id))
   (retrieve [this id]
     (sc/stream-object
      (:client config)
      {:bucket (:bucket config)
-      :path (path config id)}))
+      :name (path config id)}))
   (exists [this id]
     (boolean
      (sc/get-object-info
       (:client config)
       {:bucket (:bucket config)
-       :path (path config id)})))
+       :name (path config id)})))
   (delete [this id]
     (sc/delete-object
      (:client config)
      {:bucket (:bucket config)
-      :path (path config id)})
+      :name (path config id)})
     true))
 
 (defn gcloud-storage [config]
